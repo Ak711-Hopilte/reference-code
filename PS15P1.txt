@@ -1,0 +1,32 @@
+#PS15P1
+#Alexander Kazantzis
+#4-14-26
+
+
+
+class Employee:
+    Raise_Amt = 1.04
+    
+    def __init__(self,FstNme,LstNme,EmpPay):
+        self.FstNme = FstNme
+        self.LstNme = LstNme
+        self.EmpPay = EmpPay
+        self.Email = FstNme + '.' + LstNme + '@email.com'
+    def FullName(self):
+        return '{} {}'.format(self.FstNme, self.LstNme)
+    
+    def Apply_Raise(self):
+        self.RasdPay = float(self.EmpPay) * float(self.Raise_Amt)
+        return self.RasdPay
+
+
+FstNme = input("Enter Employee's First Name:")
+LstNme = input("Enter Employee's Last Name:")
+EmpPay = int(input("Enter Employee's pay:$"))
+
+
+Dvlpr_1 = Employee(FstNme, LstNme, EmpPay)
+
+print(Dvlpr_1.FullName())
+print(Dvlpr_1.Apply_Raise())
+print(Dvlpr_1.Email)
